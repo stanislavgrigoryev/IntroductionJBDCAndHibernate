@@ -1,12 +1,14 @@
 package org.example;
 
 import org.example.service.UserService;
+import org.example.service.UserServiceHibernateImpl;
 import org.example.service.UserServiceJDBCImpl;
 import org.example.util.Util;
 
 public class Main {
     public static void main(String[] args) {
         script(new UserServiceJDBCImpl());
+        script(new UserServiceHibernateImpl());
 
     }
 

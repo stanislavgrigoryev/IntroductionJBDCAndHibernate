@@ -17,10 +17,16 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     long id;
+    @Column
+    String name;
     @Column(name = "lastName")
     String lastName;
     @Column
-    String name;
-    @Column
     byte age;
+
+    public User(String name, String lastName, byte age) {
+        this.name = name;
+        this.lastName = lastName;
+        this.age = age;
+    }
 }
